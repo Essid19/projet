@@ -1,0 +1,31 @@
+<app-banner title="Search Teacher"></app-banner>
+
+<div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center">
+    </div>
+    <div class="row">
+      <div class="col-12 ">
+        <div class="contact-form">
+          <form action="#" #formulaire="ngForm" (ngSubmit)="add()">
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="form.specialite" name="specialite"
+                placeholder="Specialite" required>
+              <div
+                *ngIf="!form.specialite && (formulaire.controls['specialite']?.dirty || formulaire.controls['specialite']?.touched)">
+                <span style="color: red;">Specialite is required</span>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="Search Teacher">
+            </div>
+          </form>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
